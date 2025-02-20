@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
+public class QuadraticFunction {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         float a,b,c;
@@ -36,7 +36,6 @@ public class Main {
     public static void Print(String args) {
         System.out.print(args);
     }
-
 
     public static float CountDelta(float a, float b, float c) {
         return b*b - 4*a*c;
