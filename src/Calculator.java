@@ -72,24 +72,24 @@ public class Calculator {
         switch (operator) {
             case "sin":
                 result = (float) Math.sin(val);
-                System.out.printf("Sin of %f is equals: %f", val, result);
+
                 break;
             case "cos":
                 result = (float) Math.cos(val);
-                System.out.printf("Cos of %f is equals: %f", val, result);
+
                 break;
             case "tan":
                 result = (float) Math.tan(val);
-                System.out.printf("Tan of %f is equals: %f", val, result);
                 break;
             case "ctg":
                 result = 1 / (float) Math.tan(val);
-                System.out.printf("Ctg of %f is equals: %f", val, result);
                 break;
             default:
                 System.out.print("Invalid operator");
                 break;
         }
+
+        System.out.printf("%s(%f) is equal %f", operator.toUpperCase(), val, result);
     }
 
     static double Power(float a, float b) {
