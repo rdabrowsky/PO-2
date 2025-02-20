@@ -72,11 +72,9 @@ public class Calculator {
         switch (operator) {
             case "sin":
                 result = (float) Math.sin(val);
-
                 break;
             case "cos":
                 result = (float) Math.cos(val);
-
                 break;
             case "tan":
                 result = (float) Math.tan(val);
@@ -86,7 +84,7 @@ public class Calculator {
                 break;
             default:
                 System.out.print("Invalid operator");
-                break;
+                return;
         }
 
         System.out.printf("%s(%f) is equal %f", operator.toUpperCase(), val, result);
