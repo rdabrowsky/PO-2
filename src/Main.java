@@ -5,11 +5,11 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         float a,b,c;
         Print("Quadratic function equation: f(x) = ax^2+bx+c\n");
-        Print("Pass 'a' of quadratic function (a)x^2: ");
+        Print("Enter 'a' of quadratic function (a)x^2: ");
         a = sc.nextFloat();
-        Print("Pass 'b' of quadratic function (b)x: ");
+        Print("Enter 'b' of quadratic function (b)x: ");
         b = sc.nextFloat();
-        Print("Pass 'c' of quadratic function: ");
+        Print("Enter 'c' of quadratic function: ");
         c = sc.nextFloat();
 
        if (a == 0) {
