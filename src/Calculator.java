@@ -51,7 +51,10 @@ public class Calculator {
                 result = Multiply(a, b);
                 break;
             case "/":
-                if (b == 0) return;
+                if (b == 0) {
+                    System.out.print("Can't divide by zero");
+                    return;
+                }
                 result = Divide(a, b);
                 break;
             case "^":
