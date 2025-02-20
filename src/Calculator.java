@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Arrays;
 import java.util.List;
@@ -26,7 +27,11 @@ public class Calculator {
         }
 
         if (!mathOperators.contains(operator)) {
-            System.out.printf("Invalid operator. Use one of the following operators: %s or %s", Arrays.toString(trigonometryOperators.toArray()), Arrays.toString(mathOperators.toArray()));
+            List<String> mergedOperatorsList = new ArrayList<>(trigonometryOperators);
+            mergedOperatorsList.addAll(mathOperators);
+            
+            String allowedOperators = String.join(", ", mergedOperatorsList);
+            System.out.printf("Invalid operator. Use one of the following operators: %s or root", allowedOperators);
             return;
         }
 
