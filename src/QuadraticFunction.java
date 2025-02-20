@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class QuadraticFunction {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        float a,b,c;
+        float a, b, c;
         Print("Quadratic function equation: f(x) = ax^2+bx+c\n");
         Print("Enter 'a' of quadratic function (a)x^2: ");
         a = sc.nextFloat();
@@ -12,8 +12,8 @@ public class QuadraticFunction {
         Print("Enter 'c' of quadratic function: ");
         c = sc.nextFloat();
 
-       if (a == 0) {
-            if(c != 0) {
+        if (a == 0) {
+            if (c != 0) {
                 System.out.printf("It's not quadratic function, but has one root equals: %f", (-c / b));
 
                 return;
@@ -21,16 +21,16 @@ public class QuadraticFunction {
 
             Print("It's not quadratic function so can't find roots! ");
             return;
-       }
+        }
 
-       float delta = CountDelta(a,b,c);
+        float delta = CountDelta(a, b, c);
 
-       if(delta < 0) {
-           Print("Delta is negative! There is no root of quadratic function");
-           return;
-       }
+        if (delta < 0) {
+            Print("Delta is negative! There is no root of quadratic function");
+            return;
+        }
 
-        CountRoots(delta,a,b);
+        CountRoots(delta, a, b);
     }
 
     public static void Print(String args) {
@@ -38,20 +38,20 @@ public class QuadraticFunction {
     }
 
     public static float CountDelta(float a, float b, float c) {
-        return b*b - 4*a*c;
+        return b * b - 4 * a * c;
     }
 
     public static void CountRoots(float delta, float a, float b) {
-        double x1,x2;
+        double x1, x2;
 
-        if(delta == 0) {
-            x1 = -b/2*a;
+        if (delta == 0) {
+            x1 = -b / 2 * a;
             System.out.printf("Quadratic function has one root equal to %f", x1);
 
             return;
         }
 
-        double sqrtOfDelta =  Math.sqrt(delta);
+        double sqrtOfDelta = Math.sqrt(delta);
 
         x1 = (-b - sqrtOfDelta) / (2 * a);
         x2 = (-b + sqrtOfDelta) / (2 * a);

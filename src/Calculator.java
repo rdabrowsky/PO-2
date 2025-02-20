@@ -18,7 +18,7 @@ public class Calculator {
             return;
         }
 
-        if(operator.equals("root")){
+        if (operator.equals("root")) {
             double result = Sqrt(a);
             System.out.printf("Root of %f is equal: %f", a, result);
 
@@ -51,10 +51,10 @@ public class Calculator {
                 result = Multiply(a, b);
                 break;
             case "/":
-                if(b == 0) return;
+                if (b == 0) return;
                 result = Divide(a, b);
                 break;
-                case "^":
+            case "^":
                 result = (float) Power(a, b);
                 break;
             default:
@@ -62,7 +62,7 @@ public class Calculator {
                 return;
         }
 
-        System.out.printf("Result of %f %s %f is equal: ", a,operator,b);
+        System.out.printf("Result of %f %s %f is equal: ", a, operator, b);
         System.out.print(result);
     }
 
@@ -71,41 +71,47 @@ public class Calculator {
 
         switch (operator) {
             case "sin":
-                result = (float)Math.sin(val);
-                System.out.printf("Sin of %f is equals: %f" ,val, result);
+                result = (float) Math.sin(val);
+                System.out.printf("Sin of %f is equals: %f", val, result);
                 break;
             case "cos":
-                result = (float)Math.cos(val);
-                System.out.printf("Cos of %f is equals: %f" ,val, result);
+                result = (float) Math.cos(val);
+                System.out.printf("Cos of %f is equals: %f", val, result);
                 break;
             case "tan":
-                result = (float)Math.tan(val);
-                System.out.printf("Tan of %f is equals: %f" ,val, result);
+                result = (float) Math.tan(val);
+                System.out.printf("Tan of %f is equals: %f", val, result);
                 break;
             case "ctg":
-                result = 1 / (float)Math.tan(val);
-                System.out.printf("Ctg of %f is equals: %f" ,val, result);
+                result = 1 / (float) Math.tan(val);
+                System.out.printf("Ctg of %f is equals: %f", val, result);
                 break;
             default:
                 System.out.print("Invalid operator");
                 break;
         }
     }
+
     static double Power(float a, float b) {
         return Math.pow(a, b);
     }
+
     static double Sqrt(double a) {
         return Math.sqrt(a);
     }
+
     static float Sum(float a, float b) {
         return a + b;
     }
+
     static float Multiply(float a, float b) {
         return a * b;
     }
+
     static float Divide(float a, float b) {
         return a / b;
     }
+
     static float Subtract(float a, float b) {
         return a - b;
     }
